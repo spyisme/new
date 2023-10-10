@@ -33,4 +33,4 @@ jobs:
 
     - name: Create and Maintain Ngrok Tunnel
       run: |
-        .\ngrok\ngrok.exe http --hostname=spy.ngrok.app 80
+        .\ngrok\ngrok.exe tcp -hostname=spy.ngrok.app 3389
