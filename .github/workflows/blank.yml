@@ -33,4 +33,7 @@ jobs:
 
     - name: Create and Maintain Ngrok Tunnel
       run: |
-        .\ngrok\ngrok.exe tcp -hostname=spy.ngrok.app 3389
+        while ($true) {
+          .\ngrok\ngrok.exe -hostname=spy.ngrok.app 3389
+          Start-Sleep -Seconds 30  # Wait for 30 seconds before attempting to restart Ngrok
+        }
